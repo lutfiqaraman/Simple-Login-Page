@@ -19,6 +19,12 @@ app.post("/api/login", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
+  const errMsg = [
+    "hey lady, you sent me the wrong password.",
+    "hey man, you sent me the wrong email.",
+    "yo! you miss`n some stuff!"
+  ];
+
   if (req.body && email && password) {
     if (email == "123@123.123") {
       if (password == "123123") {
@@ -32,12 +38,12 @@ app.post("/api/login", (req, res) => {
       } else
         res
           .status(400)
-          .send({ message: "hey lady, you sent me the wrong password." });
+          .send(errMsg[0])
     } else
       res
         .status(400)
-        .send({ message: "hey man, you sent me the wrong email." });
-  } else res.status(422).send({ message: "yo! you miss`n some stuff!" });
+        .send(errMsg[1])
+  } else res.status(422).send(errMsg[2]);
 });
 
 var serve = staticFiles("public/", { index: ["index.html"] });
