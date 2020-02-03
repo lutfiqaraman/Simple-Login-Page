@@ -1,7 +1,11 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-var staticFiles = require("serve-static");
+const express = require("express");
+const app = express();
+const bodyParser = require("body-parser");
+const staticFiles = require("serve-static");
+
+//Crypto is a build in function in nodejs
+const crypto = require("crypto");
+
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -16,20 +20,28 @@ app.use("api/*", req => {
 });
 
 app.post("/api/login", (req, res) => {
+  //Define email and password variable
   const email = req.body.email;
   const password = req.body.password;
 
+  //Error Handling Array 
   const errMsg = [
     "hey lady, you sent me the wrong password.",
     "hey man, you sent me the wrong email.",
     "yo! you miss`n some stuff!"
   ];
 
+  //Hasing Password
+  const salt = crypto.randomBytes(16).toString('hex'); 
+  const hashingpassword = crypto.pbkdf2Sync(password, salt,  1000, 64, `sha512`).toString(`hex`); 
+
+  //"123123"
   if (req.body && email && password) {
     if (email == "123@123.123") {
-      if (password == "123123") {
+      if (hashingpassword) {
         var user = {
           ...req.body,
+          password: hashingpassword,
           name: "Alex Jones",
           profilePic: "http://lorempixel.com/500/500/people/"
         };
