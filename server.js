@@ -26,9 +26,8 @@ app.post('/api/login',  (req, res) => {
 
             if(req.body.password == '123123') {
                 var user = {
+                    ...req.body,
                     name: "Alex Jones", 
-                    email: req.body.email, 
-                    password: req.body.password, 
                     profilePic: "http://lorempixel.com/500/500/people/"
                 };
 
