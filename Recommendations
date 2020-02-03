@@ -6,7 +6,7 @@ This is a list of recommendations to make this project better
 
 1. Adding .gitignore file
 
-2. Use ECMA 6 arrow function
+2. Use ECMA 6 arrow function and clone array
 
 3. Use status method with 'res' of app
 
