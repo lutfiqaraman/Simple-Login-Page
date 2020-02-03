@@ -3,9 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const staticFiles = require("serve-static");
 
-//Crypto is a build in function in nodejs
+//Crypto is a built-in function in nodejs
 const crypto = require("crypto");
-
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -33,7 +32,7 @@ app.post("/api/login", (req, res) => {
 
   //Hasing Password
   const salt = crypto.randomBytes(16).toString('hex'); 
-  const hashingpassword = crypto.pbkdf2Sync(password, salt,  1000, 64, `sha512`).toString(`hex`); 
+  const hashingpassword = crypto.pbkdf2Sync(password, salt, 1000, 64, `sha512`).toString(`hex`); 
 
   //"123123"
   if (req.body && email && password) {
