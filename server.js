@@ -30,7 +30,7 @@ app.post("/api/login", (req, res) => {
     "yo! you miss`n some stuff!"
   ];
 
-  //Hasing Password
+  //Hasing and Salting Password
   const salt = crypto.randomBytes(16).toString('hex'); 
   const hashingpassword = crypto.pbkdf2Sync(password, salt, 1000, 64, `sha512`).toString(`hex`); 
 
