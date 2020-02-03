@@ -32,17 +32,19 @@ app.post('/api/login',  (req, res) => {
                     profilePic: "http://lorempixel.com/500/500/people/"
                 };
 
-                res.send(200, user);
+                res.status(200).send(user);
             }
             else
-                res.send(400,{message:'hey lady, you sent me the wrong password.'});
+                res.status(400).send({message:'hey lady, you sent me the wrong password.'});
+                
 
         }else
-            res.send(400,{message:'hey man, you sent me the wrong email.'});
+            res.status(400).send({message:'hey man, you sent me the wrong email.'});
+            
 
     }
     else
-        res.send(422,{message:'yo! you miss`n some stuff!'});
+        res.status(422).send({message:'yo! you miss`n some stuff!'});
 });
 
 
