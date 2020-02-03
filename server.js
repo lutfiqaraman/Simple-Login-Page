@@ -16,9 +16,7 @@ app.use('api/*',req=>{
     next();
 });
 
-
-
-app.post('/api/login', function (req, res) {
+app.post('/api/login',  (req, res) => {
 
     if(req.body && req.body.email && req.body.password){
         if(req.body.email == '123@123.123'){
