@@ -16,18 +16,3 @@ To get the project going you will need NPM and NodeJs installed. once that is co
 > npm install
 > npm start
 ````
-
-## What to change
-There are several area's of this project that are either missing or just done wrong. Some are subtle and some are obvious. This is by design. 
-
-So this is what I would like you to do
-
-1. After you login you see an ugly Profile UI. Fix it to look better 
-2. Code Review the project: Go through the entire project (even your new feature) and compile a list of changes you would make to the entire project that would make it
-  - More Secure
-  - Perform Better
-  - Better Architecture
-  - Better User Experiance
-  - Better Design
-Make sure your change list is clear. Mention which file, which line when applicable. Explain how you would change it in a sentence or two
-3. Implement as many of your suggestions as possible
