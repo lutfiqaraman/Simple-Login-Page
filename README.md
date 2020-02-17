@@ -1,5 +1,5 @@
 # makeMeBetter
-simple example of a project that needs help
+simple example of a project that builds using NodeJS
 
 ## A bit about the project
 This is a very simple Node, Angular and Bootstrap web app. All it has is a very simple login page that logs you into the Profile of the User
