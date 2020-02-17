@@ -1,4 +1,4 @@
-# makeMeBetter
+# Simple login page
 simple example of a project that builds using NodeJS
 
 ## A bit about the project
