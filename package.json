@@ -1,21 +1,13 @@
 {
-  "name": "make_me_better",
+  "name": "simple_login_page",
   "version": "1.0.0",
-  "description": "simple test to see what you can do better",
+  "description": "a simple login page",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DanielHindi/makeMeBetter.git"
-  },
-  "author": "Daniel Hindi",
+  "author": "Lutfi Qaraman",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DanielHindi/makeMeBetter/issues"
-  },
-  "homepage": "https://github.com/DanielHindi/makeMeBetter#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
