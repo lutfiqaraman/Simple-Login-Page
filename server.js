@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 const bodyParser = require("body-parser");
 const staticFiles = require("serve-static");
 
@@ -57,8 +58,7 @@ app.post("/api/login", (req, res) => {
   } else res.status(422).send(errMsg[2]);
 });
 
-var serve = staticFiles("public/", { index: ["index.html"] });
-app.use(serve);
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(3000);
 console.log("running on http://localhost:3000");
