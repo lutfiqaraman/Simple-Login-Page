@@ -46,12 +46,11 @@ app.post("/api/login", (req, res) => {
     "yo! you miss`n some stuff!"
   ];
 
-  if (req.body && email && password) {
+  if (email && password) {
     if (email == "123@123.123") {
       if (hashinguserpassword == hashingdatabasepassword) {
-        var user = {
-          ...req.body,
-          password: hashinguserpassword,
+        const user = {
+          email,
           name: "Alex Jones",
           profilePic: "http://lorempixel.com/500/500/people/"
         };
