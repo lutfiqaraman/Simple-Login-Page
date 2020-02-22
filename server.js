@@ -2,9 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");
-const staticFiles = require("serve-static");
 
-console.log(__dirname);
 require("dotenv").config({ path: "./config/.env" });
 
 const port = process.env.PORT;
