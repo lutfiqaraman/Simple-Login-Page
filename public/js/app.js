@@ -1,2 +1,2 @@
 
-window.loginApp = angular.module('loginApp',[]);
+window.loginApp = angular.module('loginApp', ['ngRoute']);
